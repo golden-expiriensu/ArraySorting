@@ -14,9 +14,13 @@ class Client
         int[] sortedOddArray = FirstTask(originalList);
         ShowArray(sortedOddArray);
 
+        Console.WriteLine("------------------------------------------");
+
         originalList = new(originalArray);
         int[] sortedEvenArray = SecondTask(originalList);
         ShowArray(sortedEvenArray);
+
+        Console.WriteLine("------------------------------------------");
 
         originalList = new(originalArray);
         int[] sortedArray = ThirdTask(originalList);
