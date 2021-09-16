@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArraySorting", "ArraySortin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArraySortingTests", "EvenOddSpliterTest\ArraySortingTests.csproj", "{12A9478D-F182-4308-9FBB-98AE607DE7A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{607AEA58-870A-49BB-A13E-72A3760A6DF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{12A9478D-F182-4308-9FBB-98AE607DE7A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12A9478D-F182-4308-9FBB-98AE607DE7A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12A9478D-F182-4308-9FBB-98AE607DE7A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{607AEA58-870A-49BB-A13E-72A3760A6DF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{607AEA58-870A-49BB-A13E-72A3760A6DF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{607AEA58-870A-49BB-A13E-72A3760A6DF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{607AEA58-870A-49BB-A13E-72A3760A6DF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
