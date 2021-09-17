@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArraySorting", "ArraySorting\ArraySorting.csproj", "{5D7C389B-520F-4042-922E-6F21801D9114}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArraySortingTests", "EvenOddSpliterTest\ArraySortingTests.csproj", "{12A9478D-F182-4308-9FBB-98AE607DE7A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tests", "Tests\Tests.csproj", "{12A9478D-F182-4308-9FBB-98AE607DE7A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{607AEA58-870A-49BB-A13E-72A3760A6DF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{607AEA58-870A-49BB-A13E-72A3760A6DF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

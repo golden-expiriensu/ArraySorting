@@ -2,10 +2,10 @@
 using ArraySorting;
 using System.Linq;
 
-namespace ArraySortingTests
+namespace Tests
 {
     [TestClass]
-    public class SortingTests
+    public class ArraySortingTests
     {
         [TestMethod]
         public void TestSortingToIncrease()

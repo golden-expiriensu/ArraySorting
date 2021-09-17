@@ -2,7 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ArraySorting;
 using System.Linq;
 
-namespace ArraySortingTests
+namespace Tests
 {
     [TestClass]
     public class EvenOddSpliterTest
