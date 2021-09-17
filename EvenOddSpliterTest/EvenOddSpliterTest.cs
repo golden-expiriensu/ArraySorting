@@ -1,5 +1,4 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 using ArraySorting;
 using System.Linq;
 
@@ -9,35 +8,35 @@ namespace ArraySortingTests
     public class EvenOddSpliterTest
     {
         [TestMethod]
-        public void TestEvenListCreating()
+        public void TestEvenArrayCreating()
         {
-            List<int> processedList = new() { 4, 6, -7, 9, -10, 89, 24 };
-            List<int> expectedList = new() { 4, 6, -10, 24 };
+            int[] processedList = { 4, 6, -7, 9, -10, 89, 24 };
+            int[] expectedList = { 4, 6, -10, 24 };
 
-            EvenOddSpliter.LeaveOnlyEvenNumbers(processedList);
+            EvenOddSpliter.LeaveOnlyEvenNumbers(ref processedList);
 
             Assert.IsTrue(expectedList.SequenceEqual(processedList));
         }
 
         [TestMethod]
-        public void TestOddListCreating()
+        public void TestOddArrayCreating()
         {
-            List<int> processedList = new() { 4, 6, -7, 9, -10, 89, 24 };
-            List<int> expectedList = new() { -7, 9, 89 };
+            int[] processedList = { 4, 6, -7, 9, -10, 89, 24 };
+            int[] expectedList = { -7, 9, 89 };
 
-            EvenOddSpliter.LeaveOnlyOddNumbers(processedList);
+            EvenOddSpliter.LeaveOnlyOddNumbers(ref processedList);
 
             Assert.IsTrue(expectedList.SequenceEqual(processedList));
         }
 
         [TestMethod]
-        public void TestOddAndEvenListSpliting()
+        public void TestOddAndEvenArraySpliting()
         {
-            List<int> processedList = new() { 4, 6, -7, 9, -10, 89, 24 };
-            List<int> oddList = new() { -7, 9, 89 };
-            List<int> evenList = new() { 4, 6, -10, 24 };
+            int[] processedList = { 4, 6, -7, 9, -10, 89, 24 };
+            int[] oddList = { -7, 9, 89 };
+            int[] evenList = { 4, 6, -10, 24 };
 
-            List<int> newOddList = EvenOddSpliter.LeaveOnlyEvenNumbersAndReturnOddNumbers(processedList);
+            int[] newOddList = EvenOddSpliter.LeaveOnlyEvenNumbersAndReturnOddNumbers(ref processedList);
 
             Assert.IsTrue(oddList.SequenceEqual(newOddList));
             Assert.IsTrue(evenList.SequenceEqual(processedList));

@@ -1,5 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 using ArraySorting;
 using System.Linq;
 
@@ -11,10 +10,10 @@ namespace ArraySortingTests
         [TestMethod]
         public void TestSortingToIncrease()
         {
-            List<int> processedList = new() { 4, 6, -7, 9, -10, 89, 24 };
-            List<int> expectedList = new() { -10, -7, 4, 6, 9, 24, 89 };
+            int[] processedList = { 4, 6, -7, 9, -10, 89, 24 };
+            int[] expectedList = { -10, -7, 4, 6, 9, 24, 89 };
 
-            ListSorter.SortIntArrayInIncrease(processedList);
+            ArraySorter.SortIntArrayInIncrease(ref processedList);
 
             Assert.IsTrue(expectedList.SequenceEqual(processedList));
         }
@@ -22,10 +21,10 @@ namespace ArraySortingTests
         [TestMethod]
         public void TestSortingToDecrease()
         {
-            List<int> processedList = new() { 4, 6, -7, 9, -10, 89, 24 };
-            List<int> expectedList = new() { 89, 24, 9, 6, 4, -7, -10 };
+            int[] processedList = { 4, 6, -7, 9, -10, 89, 24 };
+            int[] expectedList = { 89, 24, 9, 6, 4, -7, -10 };
 
-            ListSorter.SortIntArrayInDecrease(processedList);
+            ArraySorter.SortIntArrayInDecrease(ref processedList);
 
             Assert.IsTrue(expectedList.SequenceEqual(processedList));
         }

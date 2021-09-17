@@ -7,56 +7,50 @@ class Client
     static void Main(string[] args)
     {
         int[] originalArray = new int[999];
+
         FillTheArrayWithNumbers(originalArray);
-
-        List<int> originalList = new(originalArray);
-
-        int[] sortedOddArray = FirstTask(originalList);
+        int[] sortedOddArray = FirstTask(originalArray);
         ShowArray(sortedOddArray);
 
         Console.WriteLine("------------------------------------------");
 
-        originalList = new(originalArray);
-        int[] sortedEvenArray = SecondTask(originalList);
+        FillTheArrayWithNumbers(originalArray);
+        int[] sortedEvenArray = SecondTask(originalArray);
         ShowArray(sortedEvenArray);
 
         Console.WriteLine("------------------------------------------");
 
-        originalList = new(originalArray);
-        int[] sortedArray = ThirdTask(originalList);
+        FillTheArrayWithNumbers(originalArray);
+        int[] sortedArray = ThirdTask(originalArray);
         ShowArray(sortedArray);
     }
 
-    private static int[] FirstTask(List<int> originalList)
+    private static int[] FirstTask(int[] array)
     {
-        List<int> oddList = new();
-        oddList.AddRange(originalList);
-        EvenOddSpliter.LeaveOnlyOddNumbers(oddList);
-        ListSorter.SortIntArrayInIncrease(oddList);
-        return oddList.ToArray();
+        EvenOddSpliter.LeaveOnlyOddNumbers(ref array);
+        ArraySorter.SortIntArrayInIncrease(ref array);
+        return array;
     }
 
-    private static int[] SecondTask(List<int> originalList)
+    private static int[] SecondTask(int[] array)
     {
-        List<int> evenList = new();
-        evenList.AddRange(originalList);
-        EvenOddSpliter.LeaveOnlyEvenNumbers(evenList);
-        ListSorter.SortIntArrayInDecrease(evenList);
-        return evenList.ToArray();
+        EvenOddSpliter.LeaveOnlyEvenNumbers(ref array);
+        ArraySorter.SortIntArrayInDecrease(ref array);
+        return array;
     }
 
-    private static int[] ThirdTask(List<int> originalList)
+    private static int[] ThirdTask(int[] array)
     {
-        List<int> eventList = new();
-        eventList.AddRange(originalList);
-        List<int> oddList = EvenOddSpliter.LeaveOnlyEvenNumbersAndReturnOddNumbers(eventList);
+        int[] oddList = EvenOddSpliter.LeaveOnlyEvenNumbersAndReturnOddNumbers(ref array);
 
-        ListSorter.SortIntArrayInIncrease(eventList);
-        ListSorter.SortIntArrayInDecrease(oddList);
+        ArraySorter.SortIntArrayInIncrease(ref array);
+        ArraySorter.SortIntArrayInDecrease(ref oddList);
 
-        eventList.AddRange(oddList);
+        List<int> evenNumbers = new(array);
+        evenNumbers.AddRange(oddList);
+        array = evenNumbers.ToArray();
 
-        return eventList.ToArray();
+        return array;
     }
 
     static void FillTheArrayWithNumbers(int[] array)
